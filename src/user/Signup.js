@@ -136,7 +136,7 @@ const Signup = () => {
         <Button onClick={onSubmit} type='submit' variant='primary' disabled={loading}>
           {loading && (<i className="fa fa-refresh fa-spin " style={{ marginRight:"5px"}}/>)}
           {loading && <span>Signing up....</span>}
-          {!loading && <span>Signing up</span>}
+          {!loading && <span>Sign up</span>}
         </Button>
       </Form>
 
