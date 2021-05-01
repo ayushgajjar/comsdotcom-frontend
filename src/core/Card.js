@@ -34,7 +34,7 @@ const Pcard = ({
     };  
 
     return (
-      <Card className='my-3 shadow p-3 rounded'>
+      <Card className='my-3 shadow rounded'>
           {getARedirect(redirect)}
           <Link
             to={`product/${product._id}`}
