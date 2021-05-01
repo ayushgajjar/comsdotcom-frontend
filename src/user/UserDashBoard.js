@@ -12,7 +12,7 @@ const UserDashBoard = () => {
 
     const adminLeftSide = () => {
         return (
-          <div className="card">
+          <div className="shadow card">
             <h4 className="card-header text-center bg-dark text-white">User Navigation</h4>
             <ul className="list-group">
               <li className="list-group-item">
@@ -34,7 +34,7 @@ const UserDashBoard = () => {
     
       const adminRightSide = () => {
         return (
-          <div className="card mb-4">
+          <div className="card shadow mb-4">
             <h4 className="card-header text-center">User Information</h4>
             <ul className="list-group">
               <li className="list-group-item">
