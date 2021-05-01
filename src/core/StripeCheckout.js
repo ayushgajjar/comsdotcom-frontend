@@ -93,6 +93,7 @@ let famount=0;
               amount:famount,
               product_name:products.name
         } 
+        console.log(products.name)
         setData({
           ...data,
           success:true
