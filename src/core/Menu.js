@@ -6,7 +6,7 @@ import { signout, isAutheticated } from "../auth/helper/index";
 import Swal from 'sweetalert2'
 const currentTab = (history, path) => {
   if (history.location.pathname === path) {
-    return { color: "#2ecc72" };
+    return { color: "#D6EAF8" };
   } else {
     return { color: "#FFFFFF" };
   }

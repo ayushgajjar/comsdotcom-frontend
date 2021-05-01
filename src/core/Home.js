@@ -44,7 +44,7 @@ export default function Home() {
                 className='searchbox'
               ></Form.Control>
       </Form.Group>
-      {(search=="") && (<h1>Latest Products</h1>)}
+      {(search=="") && (<h1 className="text-center">Products</h1>)}
       {loader && (
         <div class="d-flex justify-content-center">
         <div class="spinner-border" role="status">
