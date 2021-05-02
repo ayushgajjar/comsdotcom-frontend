@@ -3,10 +3,10 @@ import { getOrder } from '../admin/helper/adminapicall';
 import { Link } from 'react-router-dom';
 import ImageHepler from '../core/helper/ImageHepler';
 import { Row, Col, ListGroup,  Card} from 'react-bootstrap'
-import { isAutheticated } from '../auth/helper';
+import { isAuthenticated } from '../auth/helper';
 
 const CustomerOrderDetail = ({match}) => {
-    const _id=isAutheticated().user._id;
+    const _id=isAuthenticated().user._id;
     const [values, setValues] = useState({
         id:"",
         name: "",

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
-import { isAutheticated } from '../auth/helper';
+import { isAuthenticated } from '../auth/helper';
 import FormContainer from '../user/helper/FormContainer';
 import { createCategory } from './helper/adminapicall';
 import { Form, Button } from 'react-bootstrap'
@@ -12,7 +12,7 @@ const AddCategory = () => {
     const [success, setSuccess] = useState(false);
     const [loading, setloading] = useState(false);
 
-    const {user,token} = isAutheticated();
+    const {user,token} = isAuthenticated();
 
     const goBack= () => (
         <div>

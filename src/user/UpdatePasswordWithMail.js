@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {  Redirect } from "react-router-dom";
-import { isAutheticated } from "../auth/helper";
+import { isAuthenticated } from "../auth/helper";
 import { Form, Button, Row, Col } from 'react-bootstrap'
 import FormContainer from './helper/FormContainer'
 import { forgotPassword } from "./helper/userapicalls";

@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import { Link } from 'react-router-dom';
-import { isAutheticated } from '../auth/helper';
+import { isAuthenticated } from '../auth/helper';
 import { getOrder,updateStatus } from './helper/adminapicall';
 import { Form, Button } from 'react-bootstrap'
 import FormContainer from '../user/helper/FormContainer'
@@ -16,7 +16,7 @@ const UpdateOrderStatus = ({match}) => {
     const [username, setUsername] = useState("");
     const [loading, setloading] = useState(false);
     const allStatus=["Cancelled", "Delivered", "Shipped", "Processing"];
-    const {user,token} = isAutheticated();
+    const {user,token} = isAuthenticated();
     const SendEmail=  (email,name)=>{
  
         emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLET_ID, {

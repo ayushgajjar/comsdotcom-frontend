@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getCategories,getProduct, updateProduct } from "./helper/adminapicall";
-import { isAutheticated } from "../auth/helper/index";
+import { isAuthenticated } from "../auth/helper/index";
 import { Form, Button } from 'react-bootstrap'
 import FormContainer from '../user/helper/FormContainer'
 
 const UpdateProduct = ({match}) => {
-  const { user, token } = isAutheticated();
+  const { user, token } = isAuthenticated();
 
   const [values, setValues] = useState({
     name: "",

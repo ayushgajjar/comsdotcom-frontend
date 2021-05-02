@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import { Link } from 'react-router-dom';
-import { isAutheticated } from '../auth/helper';
+import { isAuthenticated } from '../auth/helper';
 import { getCategory, updateCategory } from './helper/adminapicall';
 import { Form, Button } from 'react-bootstrap'
 import FormContainer from '../user/helper/FormContainer';
@@ -12,7 +12,7 @@ const UpdateCategory = ({match}) => {
     const [success, setSuccess] = useState(false);
     const [loading, setloading] = useState(false)
 
-    const {user,token} = isAutheticated();
+    const {user,token} = isAuthenticated();
 
     const preload = (categoryId) => {
         getCategory(categoryId).then(data => {

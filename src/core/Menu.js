@@ -2,7 +2,7 @@ import React, {Fragment} from "react";
 import { Navbar, Nav, Container } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import {  withRouter } from "react-router-dom";
-import { signout, isAutheticated } from "../auth/helper/index"; 
+import { signout, isAuthenticated } from "../auth/helper/index"; 
 import Swal from 'sweetalert2'
 const currentTab = (history, path) => {
   if (history.location.pathname === path) {
@@ -23,13 +23,13 @@ const Menu = ({ history }) => (
           <Navbar.Collapse id='basic-navbar-nav'>
             
             <Nav className='ml-auto'>
-            {isAutheticated() && isAutheticated().user.role ===0 && (<LinkContainer style={currentTab(history, "/cart")} to='/cart'>
+            {isAuthenticated() && isAuthenticated().user.role ===0 && (<LinkContainer style={currentTab(history, "/cart")} to='/cart'>
                 <Nav.Link>
                   <i className='fas fa-shopping-cart'></i> Cart
                 </Nav.Link>
               </LinkContainer>)}
 
-              {isAutheticated() && isAutheticated().user.role ===0 && (
+              {isAuthenticated() && isAuthenticated().user.role ===0 && (
                 <LinkContainer style={currentTab(history, "/user/dashboard")}  to='/user/dashboard'>
                   <Nav.Link>
                     Dashboard
@@ -37,7 +37,7 @@ const Menu = ({ history }) => (
                 </LinkContainer>
               )}
 
-              {isAutheticated() && isAutheticated().user.role===1 && (
+              {isAuthenticated() && isAuthenticated().user.role===1 && (
                 <LinkContainer style={currentTab(history, "/admin/dashboard")}  to='/admin/dashboard'>
                   <Nav.Link>
                     Dashboard
@@ -45,7 +45,7 @@ const Menu = ({ history }) => (
                 </LinkContainer>
               )}
 
-              {!isAutheticated() && (
+              {!isAuthenticated() && (
                 <Fragment>
                   <LinkContainer style={currentTab(history, "/cart")} to='/cart'>
                 <Nav.Link>
@@ -65,7 +65,7 @@ const Menu = ({ history }) => (
                   
                 </Fragment>
               )}
-              {isAutheticated() && (
+              {isAuthenticated() && (
 
                 <LinkContainer to="/" onClick={() => {
                   Swal.fire({

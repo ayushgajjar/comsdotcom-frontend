@@ -1,12 +1,12 @@
 import React,{useState,useEffect} from 'react'
 import { Link } from 'react-router-dom';
-import { isAutheticated } from '../auth/helper';
+import { isAuthenticated } from '../auth/helper';
 import {deleteProduct, getProducts} from "./helper/adminapicall"
 import {  Col, Table, Button } from 'react-bootstrap';
 import ImageHepler from '../core/helper/ImageHepler';
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
-    const {user,token} = isAutheticated();
+    const {user,token} = isAuthenticated();
     const [loader, setloader] = useState(true);
     const preload = () => {
         getProducts().then(data => {

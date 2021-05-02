@@ -1,12 +1,12 @@
 import React,{useState,useEffect} from 'react'
 import { Link } from 'react-router-dom';
-import { isAutheticated } from '../auth/helper';
+import { isAuthenticated } from '../auth/helper';
 import {deleteCategory, getCategories} from "./helper/adminapicall"
 import { Table, Button } from 'react-bootstrap';
 
 const ManageCategories = () => {
     const [Categories, setCategories] = useState([]);
-    const {user,token} = isAutheticated();
+    const {user,token} = isAuthenticated();
     const [loader, setloader] = useState(true)
     const preload = () => {
         getCategories().then(data => {

@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { Link } from 'react-router-dom';
-import { isAutheticated } from '../auth/helper';
+import { isAuthenticated } from '../auth/helper';
 import { getOrders} from "./helper/adminapicall"
 import {  Table, Button } from 'react-bootstrap';
 
@@ -8,7 +8,7 @@ const ManageOrders = () => {
 
     const [orders, setOrders] = useState([]);
     const [loader, setloader] = useState(true);
-    const {user,token} = isAutheticated();
+    const {user,token} = isAuthenticated();
 
     const preload = () => {
         getOrders(user._id,token).then(data => {

@@ -1,13 +1,13 @@
 import React from "react";
 import Base from "../core/Base";
-import { isAutheticated } from "../auth/helper/index";
+import { isAuthenticated } from "../auth/helper/index";
 import { Link } from "react-router-dom";
 import { Row, Col } from 'react-bootstrap'
 
 const AdminDashBoard = () => {
   const {
     user: { name, email, role }
-  } = isAutheticated();
+  } = isAuthenticated();
 
   const adminLeftSide = () => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { isAutheticated } from '../auth/helper';
+import { isAuthenticated } from '../auth/helper';
 import { Row, Col } from 'react-bootstrap'
 
 
@@ -8,7 +8,7 @@ const UserDashBoard = () => {
 
     const {
         user: { _id,name, email}
-      } = isAutheticated();
+      } = isAuthenticated();
 
     const adminLeftSide = () => {
         return (
