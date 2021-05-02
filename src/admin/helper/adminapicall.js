@@ -61,9 +61,6 @@ export const updateCategory = (categoryId,userId, token,category) => {
 export const deleteCategory = (categoryId, userId, token) => {
   
   
-
-
-
   return fetch(`${API}/category/${categoryId}/${userId}`, {
     method: "DELETE",
     headers: {

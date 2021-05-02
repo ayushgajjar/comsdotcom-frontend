@@ -112,7 +112,7 @@ const ChangePassword = () => {
             className="alert alert-success"
             style={{ display: success ? "" : "none" }}
           >
-            Password Change Succesfully
+            Password Changed Succesfully
             
           </div>
         </div>

@@ -9,7 +9,7 @@ const CustomerOrders = () => {
     const [orders, setOrders] = useState([]);
     const [loader, setloader] = useState(true);
     const {user,token} = isAuthenticated();
-    const AllOrder=[];
+    
     const preload = () => {
         getOrder(user._id,token).then(data => {
             if(data.error){
