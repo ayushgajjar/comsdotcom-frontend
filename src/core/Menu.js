@@ -51,7 +51,7 @@ const Menu = ({ history }) => (
                 <Nav.Link>
                   <i className='fas fa-shopping-cart'></i> Cart
                 </Nav.Link>
-              </LinkContainer>)
+              </LinkContainer>
                   <LinkContainer style={currentTab(history, "/signup")}  to='/signup'>
                     <Nav.Link>
                       Signup
